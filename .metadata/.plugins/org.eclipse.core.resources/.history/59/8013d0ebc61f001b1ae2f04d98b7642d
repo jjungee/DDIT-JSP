@@ -1,0 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%-- <% request.getRequestDispatcher("/WEB-INF/views/main.jsp").forward(request,response);%> --%>
+
+<c:if test="${param.page eq 'c' }">
+<jsp:import url="/WEB-INF/views/main.jsp"/>

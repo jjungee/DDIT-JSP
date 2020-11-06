@@ -1,0 +1,18 @@
+
+10월 26, 2020 17:56:04.42 NEW SESSION
+10월 26, 2020 17:56:04.42 [12828:14988:1026/175604.427:ERROR:device_event_log_impl.cc(208)] [17:56:04.426] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+
+10월 29, 2020 16:13:01.21 NEW SESSION
+10월 29, 2020 16:13:01.21 [14552:5700:1029/161301.217:ERROR:backend_impl.cc(1041)] Critical error found -8
+10월 29, 2020 16:13:10.30 [14552:14204:1029/161310.301:ERROR:device_event_log_impl.cc(208)] [16:13:10.301] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+10월 29, 2020 16:22:59.64 [1029/162259.646:ERROR:directory_reader_win.cc(43)] FindFirstFile: ������ ��θ� ã�� �� �����ϴ�. (0x3)
+
+11월 03, 2020 09:33:55.74 NEW SESSION
+11월 03, 2020 09:33:55.74 [12536:9816:1103/093355.732:ERROR:device_event_log_impl.cc(208)] [09:33:55.733] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+11월 03, 2020 09:43:46.77 [1103/094346.777:ERROR:directory_reader_win.cc(43)] FindFirstFile: ������ ��θ� ã�� �� �����ϴ�. (0x3)
+11월 03, 2020 10:17:21.42 [12536:12628:1103/101721.428:ERROR:socket_stream.cc(219)] Closing stream with result -2
+
+11월 05, 2020 09:20:32.09 NEW SESSION
+11월 05, 2020 09:20:32.09 [5424:1852:1105/092032.079:ERROR:device_event_log_impl.cc(208)] [09:20:32.078] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+11월 05, 2020 09:21:15.85 [9076:14760:1105/092115.851:ERROR:device_event_log_impl.cc(208)] [09:21:15.851] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+11월 05, 2020 09:31:07.36 [1105/093107.362:ERROR:directory_reader_win.cc(43)] FindFirstFile: ������ ��θ� ã�� �� �����ϴ�. (0x3)

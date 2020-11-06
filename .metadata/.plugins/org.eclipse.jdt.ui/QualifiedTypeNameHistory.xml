@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
+<fullyQualifiedTypeName name="com.config.BuildSqlMapClient"/>
+<fullyQualifiedTypeName name="com.jsp.dao.RegistDao"/>
+<fullyQualifiedTypeName name="com.jsp.dao.RegistDaoImpl"/>
+<fullyQualifiedTypeName name="com.jsp.dao.MemberDaoImpl"/>
+<fullyQualifiedTypeName name="com.jsp.dao.MemberDao"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.jsp.service.MemberService"/>
+<fullyQualifiedTypeName name="com.jsp.service.MemberServiceImpl"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.jsp.dto.MemberVO"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="com.jsp.utils.ViewResolver"/>
+</qualifiedTypeNameHistroy>

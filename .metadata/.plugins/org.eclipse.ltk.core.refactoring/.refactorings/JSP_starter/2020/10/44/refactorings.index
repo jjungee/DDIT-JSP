@@ -1,0 +1,21 @@
+1603847739282	Move 3 resources to 'public'
+1603847749228	Move 2 resources to 'WebContent'
+1603847880810	Move 'gugudanForm.jsp' to 'views'
+1603850502270	Move 'gugudan.jsp' to 'views'
+1603874525966	Rename resource 'NewFile.xml'
+1603876222719	Move file
+1603876249875	Rename resource 'ibatis.xml'
+1603876331568	Rename resource 'join.xml'
+1603877584867	Delete element
+1603879011035	Rename type 'registDao'
+1603879646757	Delete element
+1603879714758	Copy compilation unit
+1603879721436	Delete element
+1603879891028	Delete element
+1603879932716	Move file
+1603879935386	Move file
+1603879936794	Move file
+1603880470897	Rename type 'RegistDaoImpl'
+1603880497800	Rename type 'RegistDao'
+1603942502007	Move 'EL' to 'WebContent'
+1603955404266	Rename resource 'regist.jsp'
