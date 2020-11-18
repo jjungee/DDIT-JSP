@@ -158,7 +158,7 @@
 	</body>
 	<script type="text/javascript">
 		document.querySelector('form[action="login"] input[type="button"]').onclick = function(event) {
-	
+			
 			document.form.submit();
 		};
 		

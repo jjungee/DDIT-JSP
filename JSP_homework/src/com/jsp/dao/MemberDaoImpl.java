@@ -3,61 +3,93 @@ package com.jsp.dao;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.config.BuildSqlMapClient;
-import com.ibatis.sqlmap.client.SqlMapClient;
+import org.apache.ibatis.session.RowBounds;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
 import com.jsp.dto.MemberVO;
+import com.jsp.request.SearchCriteria;
 
-
-
-public class MemberDaoImpl implements MemberDao{
-	private SqlMapClient client;
-	private static MemberDao dao;
-	public MemberDaoImpl() {
-		client = BuildSqlMapClient.getSqlMapClient();
-	}
+public class MemberDAOImpl implements MemberDAO {
+	//SqlSessionFactory
+	private SqlSessionFactory sqlSessionFactory;
 	
-	public static MemberDao getInstance() {
-		if(dao == null) dao = new MemberDaoImpl();
-		
-		return dao;
-		
+	
+
+	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
+		this.sqlSessionFactory = sqlSessionFactory;
+	}
+
+	
+	@Override
+	public MemberVO selectMemberById(String id) throws SQLException {
+		SqlSession session = sqlSessionFactory.openSession();
+		MemberVO member = session.selectOne("Member-Mapper.selectMemberById",id);
+		session.close();
+		return member;
 	}
 	
 	@Override
-	public MemberVO getMember(String id) {
-		MemberVO vo = null;
+	public List<MemberVO> selectMemberList(SearchCriteria cri) throws SQLException {
+		SqlSession session = sqlSessionFactory.openSession();
 		
-		try {
-			vo = (MemberVO)client.queryForObject("member.getMember",id);
-		} catch (Exception e) {
-		}
-		
-		return vo;
-		
-	}@Override
-	public int regist(MemberVO member) throws SQLException {
-		int cnt = 0;
-		try {
-			Object obj = client.insert("member.regist",member);
-			if (obj == null) cnt = 1;
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
+		int offset = cri.getPageStartNum();
+		int limit = cri.getPerPageNum();
+		RowBounds rowBounds = new RowBounds(offset, limit);
 		
 		
-		return cnt;
-	}
-	
-	@Override
-	public List<MemberVO> getMemberList() throws SQLException {
 		List<MemberVO> memberList = null;
 		
-		try {
-			memberList = client.queryForList("member.getMemberList");
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
 		
+		memberList = session.selectList("Member-Mapper.selectSearchMemberList",cri, rowBounds);
+		session.close();
 		return memberList;
 	}
+
+	@Override
+	public int selectMemberListCount(SearchCriteria cri) throws SQLException {
+		int count = 0;
+		SqlSession session = sqlSessionFactory.openSession();
+		count = session.selectOne("Member-Mapper.selectMemberListCount",cri);
+		session.close();
+		return count;
+	}
+
+	
+	@Override
+	public void insertMember(MemberVO member) throws SQLException {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		session.update("Member-Mapper.insertMember",member);
+		session.close();
+	}
+	
+	@Override
+	public void updateMemeber(MemberVO member) throws SQLException {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		session.update("Member-Mapper.updateMemeber",member);
+		session.close();
+	}
+	
+	@Override
+	public void disabledMemeber(MemberVO member) throws SQLException {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		session.update("Member-Mapper.disabledMemeber",member);
+		session.close();
+	}
+
+	
+	@Override
+	public void enabledMemeber(MemberVO member) throws SQLException {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		session.update("Member-Mapper.enabledMemeber",member);
+		session.close();
+	}
+
+	@Override
+	public void deleteMemeber(String id) throws SQLException {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		session.update("Member-Mapper.deleteMemeber",id);
+		session.close();
+	}
+
 }
