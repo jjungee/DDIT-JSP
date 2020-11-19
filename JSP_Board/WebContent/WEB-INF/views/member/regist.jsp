@@ -103,14 +103,13 @@
 						<div class="card-footer">
 							<div class="row">								
 								<div class="col-sm-6">
-									<button type="button" id="registBtn" class="btn btn-info">가입하기</button>
+									<button type="button" id="registBtn" class="btn btn-info" onclick="submit_go();">가입하기</button>
 							 	</div>
 							 	
 							 	<div class="col-sm-6">
 									<button type="button" id="cancelBtn" onclick="CloseWindow();"
 										class="btn btn-default float-right">&nbsp;&nbsp;&nbsp;취 &nbsp;&nbsp;소&nbsp;&nbsp;&nbsp;</button>
 								</div>
-							
 							</div>
 						</div>
 					</form>					
@@ -122,3 +121,4 @@
 <!-- /.content-wrapper -->
 
 <%@ include file="picture_js.jsp"%>
+<%@ include file="regist_js.jsp"%>

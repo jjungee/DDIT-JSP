@@ -13,13 +13,10 @@ import com.jsp.request.SearchCriteria;
 public class MemberDAOImpl implements MemberDAO {
 	//SqlSessionFactory
 	private SqlSessionFactory sqlSessionFactory;
-	
-	
 
 	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
 		this.sqlSessionFactory = sqlSessionFactory;
 	}
-
 	
 	@Override
 	public MemberVO selectMemberById(String id) throws SQLException {

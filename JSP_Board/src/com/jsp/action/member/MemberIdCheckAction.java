@@ -1,6 +1,7 @@
-package com.jsp.action.common;
+package com.jsp.action.member;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -8,12 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.jsp.action.Action;
-import com.jsp.dispatcher.ViewResolver;
-import com.jsp.exception.InvalidPasswordException;
-import com.jsp.exception.NotFoundIDException;
 import com.jsp.service.MemberService;
 
-public class LoginAction implements Action {
+public class MemberIdCheckAction implements Action {
 	private MemberService memberService;
 
 	public void setMemberService(MemberService memberService) {
@@ -23,21 +21,22 @@ public class LoginAction implements Action {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String url = "redirect:/index.do";
 		
-		//로그인처리
+		String url = "";
+		
 		String id = request.getParameter("id");
-		String pwd = request.getParameter("pwd");
-	
+		
+		PrintWriter out = response.getWriter();
+		
 		try {
-			memberService.login(id, pwd, request.getSession());
-		}catch (SQLException e) {
-			e.printStackTrace();
-		}catch (NotFoundIDException | InvalidPasswordException e) {
-			//e.printStackTrace();
-			url="redirect:/";
-			request.getSession().setAttribute("msg", e.getMessage());
+			out.print(memberService.getMember(id) == null ? id : "");
+		} catch (SQLException e) {
+			response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+		}finally {
+			if(out != null) out.close();
 		}
+		
 		return url;
 	}
+
 }

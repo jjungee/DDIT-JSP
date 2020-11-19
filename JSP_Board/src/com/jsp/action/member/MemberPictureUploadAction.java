@@ -26,9 +26,6 @@ public class MemberPictureUploadAction implements Action {
    private static final int MAX_FILE_SIZE = 1024 * 1024 *  1; // 1MB
    private static final int MAX_REQUEST_SIZE = 1024 * 1024 * 2; // 2MB
    
-   
-   
-   
    @Override
    public String execute(HttpServletRequest request, HttpServletResponse response)
          throws ServletException, IOException {
