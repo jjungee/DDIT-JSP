@@ -8,14 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.jsp.action.Action;
 
-public class LoginFormAction implements Action{
+public class LoginFormAction implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		String url = "/common/loginForm";
+		String url="/common/loginForm";
 		
 		return url;
 	}
+
 }

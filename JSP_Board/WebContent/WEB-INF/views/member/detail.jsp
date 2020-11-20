@@ -5,12 +5,10 @@
 
 
 <body>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div >
- 
-    <!-- Main content -->
-    <section class="content register-page" style="height: 586.391px;">       
+ <!-- Content Wrapper. Contains page content -->
+  <div>
+   <!-- Main content -->
+  <section class="content register-page" style="height: 586.391px;">       
 		<div class="register-box" style="min-width:450px;">         
 	    	<form role="form" class="form-horizontal"  method="post">
 	        	<div class="register-card-body" >
@@ -21,34 +19,37 @@
 					</div>
 					<br />
 	                <div class="form-group row" >
-	                  <label for="inputId3" class="col-sm-3 control-label text-right">아이디</label>
+	                  <label for="inputEmail3" class="col-sm-3 control-label text-right">아이디</label>
+	
 	                  <div class="col-sm-9">
-	                  	<input name="id" type="text" class="form-control" id="inputId3" value="${member.id }" readonly>
+	                    <input name="id" type="text" class="form-control" id="inputEmail3"  value="${member.id }" readonly>
 	                  </div>
-	                </div>	  
-	                             
+	                </div>	               
 	                <div class="form-group row">
 	                  <label for="inputPassword3" class="col-sm-3 control-label text-right">이  름</label>
+	
 	                  <div class="col-sm-9">
-	                  	<input name="pwd" type="text" class="form-control" id="inputPassword3" value="${member.pwd }">
-	                  </div>
-	                </div>
-	                
-	                 <div class="form-group row">
-	                  <label for="inputEmail3" class="col-sm-3 control-label text-right">이메일</label>
-	                  <div class="col-sm-9">
-	                  	<input name="email" type="text" class="form-control" id="inputEmail3" value="${member.email }">
+	                    <input name="name" type="text" class="form-control" id="inputPassword3" value="${member.name }" readonly>
 	                  </div>
 	                </div>
 	                 <div class="form-group row">
-	                  <label for="inputPhone3" class="col-sm-3 control-label text-right">전화번호</label>
+	                  <label for="inputPassword3" class="col-sm-3 control-label text-right">이메일</label>
+	
+	                  <div class="col-sm-9">
+	                    <input name="email" type="email" class="form-control" id="inputPassword3" value="${member.email }" readonly>
+	                  </div>
+	                </div>
+	                 <div class="form-group row">
+	                  <label for="inputPassword3" class="col-sm-3 control-label text-right">전화번호</label>
 	                  <div class="col-sm-9">   
-	                  	<input name="phone" type="text" class="form-control" id="inputPhone3" value="${member.phone }">
+	                  	<input name="phone" type="text" class="form-control" id="inputPassword3" value="${member.phone}" readonly>	                
 	                  </div>                  
 	                </div>               
 	              </div>  
 		          <div class="card-footer" >
 		          		<div class="row">
+			          		
+			          		
 			          		<div class="col-sm-3 text-center">
 			          			<button type="button" id="modifyBtn" class="btn btn-warning ">수 정</button>
 			          		</div>
@@ -73,3 +74,9 @@
   <!-- /.content-wrapper -->
   <%@ include file="detail_js.jsp" %>
 </body>
+
+
+
+
+
+

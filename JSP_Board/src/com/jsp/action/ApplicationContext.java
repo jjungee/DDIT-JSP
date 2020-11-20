@@ -9,7 +9,12 @@ public class ApplicationContext {
 	
 	private ApplicationContext() {}
 	
-	public static Map<String, Object> getApplicationContext(){
+	public static Map<String, Object> getApplicationContext() {
 		return applicationContext;
 	}
 }
+
+	
+	
+	
+	

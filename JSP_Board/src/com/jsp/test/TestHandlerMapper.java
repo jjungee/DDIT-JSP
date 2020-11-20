@@ -1,6 +1,6 @@
 package com.jsp.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 import org.junit.After;
 import org.junit.Before;
@@ -9,11 +9,11 @@ import org.junit.Test;
 import com.jsp.dispatcher.HandlerMapper;
 
 public class TestHandlerMapper {
-
+	
 	private HandlerMapper handlerMapper;
 	
 	@Before
-	public void init() throws Exception{
+	public void init() throws Exception {
 		handlerMapper = new HandlerMapper();
 	}
 	
@@ -21,8 +21,11 @@ public class TestHandlerMapper {
 	public void test1() {
 		fail("Not yet implemented");
 	}
-
+	
 	
 	@After
 	public void complete() {}
+
 }
+
+

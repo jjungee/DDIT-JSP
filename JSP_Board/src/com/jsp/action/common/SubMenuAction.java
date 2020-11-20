@@ -15,30 +15,29 @@ import com.jsp.dto.MenuVO;
 import com.jsp.service.MenuService;
 
 public class SubMenuAction implements Action {
-
-	private MenuService menuService;
 	
+	private MenuService menuService;
 	public void setMenuService(MenuService menuService) {
-		this.menuService = menuService;
+		this.menuService=menuService;
 	}
 	
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		String url ="";
+		String url="";
 		String mCode = request.getParameter("mCode");
 		
-		List<MenuVO> subMenu = null;
+		List<MenuVO> subMenu =null;
 		
 		try {
-			subMenu = menuService.getSubMenuList(mCode);
-			
-			ObjectMapper mapper = new ObjectMapper();
-			String jsonData = mapper.writeValueAsString(subMenu);
-			
+			 subMenu=menuService.getSubMenuList(mCode);
+			 
+			 ObjectMapper mapper=new ObjectMapper();
+			 String jsonData = mapper.writeValueAsString(subMenu);
+			 
 			response.setContentType("application/json;charset=utf-8");
-			PrintWriter out = response.getWriter();
+			PrintWriter out=response.getWriter();
+			
 			
 			out.println(jsonData);
 			out.close();

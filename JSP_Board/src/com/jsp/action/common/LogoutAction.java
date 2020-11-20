@@ -14,11 +14,11 @@ public class LogoutAction implements Action {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String url = "redirect:/";
+		String url="redirect:/";
 		
 		HttpSession session = request.getSession();
 		session.invalidate();
-
+		
 		return url;
 	}
 

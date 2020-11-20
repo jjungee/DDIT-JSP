@@ -40,13 +40,13 @@ body.login-page{
 		 <div class="card-body login-card-body">
 			<p class="login-box-msg">Sign in to start your session</p>
 
-			<form action="<%=request.getContextPath() %>/common/login.do" method="post">
+			<form action="<%=request.getContextPath() %>/common/login.do"	method="post">
 				<div class="form-group has-feedback">
-					<input type="text" class="form-control" name="id" id = "id"placeholder="아이디를 입력하세요." value="${pastID }">
+					<input type="text" class="form-control" name="id" placeholder="아이디를 입력하세요." value="${pastID }">
 					<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 				</div>
 				<div class="form-group has-feedback">
-					<input type="password" class="form-control" name="pwd" id="pwd" placeholder="패스워드를 입력하세요."  value="mimi">
+					<input type="password" class="form-control" name="pwd" placeholder="패스워드를 입력하세요."  value="mimi">
 					<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 				</div>
 				<div class="row">
@@ -64,7 +64,11 @@ body.login-page{
 				</div>
 			</form>
 
+			
+
 			<a href="#" style="font-weight:bold;">아이디/패스워드 찾기</a><br> 
+			
+
 		</div>
 		<!-- /.login-box-body -->
 	  </div>	
@@ -86,3 +90,10 @@ body.login-page{
 	<% session.removeAttribute("msg"); %>
 </body>
 </html>
+
+
+
+
+
+
+

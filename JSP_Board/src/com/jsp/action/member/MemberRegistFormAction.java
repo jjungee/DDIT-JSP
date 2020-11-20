@@ -13,7 +13,7 @@ public class MemberRegistFormAction implements Action {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String url = "/member/regist";
+		String url="/member/regist";
 		return url;
 	}
 
