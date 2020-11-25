@@ -16,10 +16,11 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="member" key="selection"/>
+		<item value="sync" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="sysc"/>
 			<item value="vo"/>
 			<item value="2"/>
 			<item value="footer"/>
@@ -29,6 +30,7 @@
 			<item value="th"/>
 		</list>
 		<list key="replacehistory">
+			<item value="sync"/>
 			<item value="member"/>
 			<item value="6"/>
 			<item value="&lt;%=request.getContextPath()%&gt;/resources/bootstrap/dist"/>

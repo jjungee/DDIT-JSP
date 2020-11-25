@@ -27,10 +27,10 @@ public class IndexAction implements Action {
 		
 		String mCode = request.getParameter("mCode");
 		
-		if(mCode ==null) mCode="M000000";
+		if(mCode == null) mCode="M000000";
 		
 		try {
-			List<MenuVO> menuList = menuService.getMainMenuList();			
+			List<MenuVO> menuList = menuService.getMainMenuList();
 			MenuVO menu = menuService.getMenuByMcode(mCode);
 			
 			request.setAttribute("menuList",menuList);

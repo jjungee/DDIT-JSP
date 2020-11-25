@@ -61,6 +61,10 @@ public class ApplicationContextLoaderListener implements ServletContextListener 
 						String setInstanceName = ((method.getName().replace("set", "")).charAt(0) + "").toLowerCase()
 								+ method.getName().substring(4);
 						
+						if(applicationContext.get(setInstanceName) == null) {
+							throw new Exception(setInstanceName + "인스턴스가 존재하지 않습니다.");
+						}
+						
 						method.invoke(applicationContext.get(paramName), applicationContext.get(setInstanceName));
 						
 						System.out.println("instance inject : "+paramName+"-"+method.getName());
